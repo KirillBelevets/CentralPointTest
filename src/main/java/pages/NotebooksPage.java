@@ -3,11 +3,8 @@ package pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import util.TestBaseClass;
 
 public class NotebooksPage {
 	private WebDriver driver;
@@ -22,19 +19,18 @@ public class NotebooksPage {
 	By searchField = By.cssSelector("input[name='search']");
 	By buttonSubmitSearch = By.cssSelector("button[type='submit']");
 	By checkBOXFirstDisplayed = By.cssSelector("#filters form ul li input");
-	
-	public List<WebElement> findCheckBoxFisrtDisplayed () {
+
+	public List<WebElement> findCheckBoxFisrtDisplayed() {
 		return driver.findElements(checkBOXFirstDisplayed);
 	}
-	
-	public WebElement findButtomSubmit () {
+
+	public WebElement findButtomSubmit() {
 		return driver.findElement(buttonSubmitSearch);
 	}
-	
-	public WebElement findSearchField () {
+
+	public WebElement findSearchField() {
 		return driver.findElement(searchField);
 	}
-
 
 	public List<WebElement> priceOnResultPage() {
 		return driver.findElements(priceExcl);
@@ -57,7 +53,7 @@ public class NotebooksPage {
 	}
 
 	public List<WebElement> firstCheckBox() {
-		
+
 		return driver.findElements(dropdown);
 	}
 
